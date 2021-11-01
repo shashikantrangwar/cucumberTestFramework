@@ -5,6 +5,7 @@
           name="C:/GitHub/cucumberTestFramework">
        <classes>
            <class name="Runners.Run"></class>
+           <class name="Runners.Run1"></class>
        </classes>
     </test>
 </suite>
