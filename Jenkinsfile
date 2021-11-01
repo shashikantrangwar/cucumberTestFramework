@@ -23,6 +23,14 @@ pipeline {
                 powershell 'mvn clean test -f pom.xml -s settings.xml'
             }
         }
+         stage('Cucumber Reports') {
+            steps {
+                echo 'cucumber Reports'
+                cucumber buildStatus: "UNSTABLE",
+                fileIncludePattern: "**/cucumber-reports/Cucumber.json",
+                jsonReportDirectory: 'target'
+            }
+        }
         
     }
 }
